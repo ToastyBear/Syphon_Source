@@ -108,7 +108,7 @@ public enum DashState
             if (Physics.Raycast(cameraRay, out cameraRayHit))
             {
                 // ...and if that object is the ground...
-                if (cameraRayHit.transform.tag == "Ground" || cameraRayHit.transform.tag == "Enemy")
+                if (cameraRayHit.transform.tag == "Ground" || cameraRayHit.transform.tag == "Enemy" || cameraRayHit.transform.tag == "Wall")
                 {
                     // ...make the cube rotate (only on the Y axis) to face the ray hit's position 
                     Vector3 targetPosition = new Vector3(cameraRayHit.point.x, transform.position.y, cameraRayHit.point.z);
@@ -163,5 +163,14 @@ public enum DashState
         void shoot() {
      
 
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Projectile")
+        {
+            Destroy(other.gameObject);
+            playerHealth -= 10;
+        }
     }
 }

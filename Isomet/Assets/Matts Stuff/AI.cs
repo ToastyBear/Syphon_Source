@@ -19,10 +19,12 @@ public class AI : MonoBehaviour {
     public GameObject m_arrow;
     bool m_canAttack = true;
     NavMeshAgent m_navAgent;
+    public Spawner m_spawnScript;
 
     void Start() {
         m_navAgent = GetComponent<NavMeshAgent>();
-        m_target = GameObject.Find("Character").transform;  //Find Betterway
+        m_target = GameObject.Find("Player").transform;  //Find Betterway
+        m_spawnScript = GameObject.Find("SpawnParent").GetComponent<Spawner>();
         m_navAgent.destination = m_target.position;
         m_navAgent.stoppingDistance = m_range;
         m_navAgent.speed = m_speed;
@@ -64,6 +66,10 @@ public class AI : MonoBehaviour {
             else if ((m_target.position - transform.localPosition).normalized.z == 0) transform.Translate(0, 0, 0);
             LookAtPlayer();
         }
+        if(m_health < 0)
+        {
+            Die();
+        }
     }
 
     void LookAtPlayer()
@@ -78,7 +84,7 @@ public class AI : MonoBehaviour {
             //If character visible attack               ///----MAKE EFFICEITN---///
             RaycastHit hit;
             if (Physics.Raycast(transform.position, transform.forward, out hit, m_range))
-                if (hit.collider.name == "Character") StartCoroutine(Attack());
+                if (hit.collider.name == "Player") StartCoroutine(Attack());
         }
     } 
 
@@ -86,10 +92,27 @@ public class AI : MonoBehaviour {
     {
         print("BeginAttack");
         m_canAttack = false;
-        if (m_isRanged) Instantiate(m_arrow, transform.position, transform.localRotation);
-        else print("Swing");
+        GameObject arrowSpawned;
+        if (m_isRanged) arrowSpawned = Instantiate(m_arrow, transform.position, transform.localRotation);
+        else
+        {
+            print("Swing");
+            arrowSpawned = Instantiate(m_arrow, transform.position, transform.localRotation);
+        }
+        arrowSpawned.GetComponent<Arrow>().m_damage = m_damage;
         yield return new WaitForSeconds(m_attackSpeed);
         m_canAttack = true;
+    }
+
+    void Die()
+    {
+        m_spawnScript.RemoveAI(gameObject);
+        Destroy(gameObject);
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.name == "Bullet(Clone)") m_health -= 5.0f;
     }
    
 

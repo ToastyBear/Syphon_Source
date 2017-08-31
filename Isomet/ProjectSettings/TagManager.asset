@@ -6,8 +6,9 @@ TagManager:
   tags:
   - Ground
   - Pullable
-  - Wall
   - Enemy
+  - Wall
+  - Projectile
   layers:
   - Default
   - TransparentFX

@@ -18,6 +18,8 @@ public class AIEditor : Editor {
         myTarget.m_speed = EditorGUILayout.FloatField("Move Speed : ", myTarget.m_speed);
         myTarget.m_attackSpeed = EditorGUILayout.FloatField("Attack Speed : ", myTarget.m_attackSpeed);
         myTarget.m_rotationSpeed = EditorGUILayout.FloatField("Rotation Speed : ", myTarget.m_rotationSpeed);
+        myTarget.m_damage = EditorGUILayout.FloatField("Damage : ", myTarget.m_damage);
+        myTarget.m_health = EditorGUILayout.FloatField("Health : ", myTarget.m_health);
         myTarget.m_isRanged = EditorGUILayout.Toggle("Is Ranged? ", myTarget.m_isRanged);
         viewFullInspector = EditorGUILayout.Toggle("View Inspector", viewFullInspector);
         GUILayout.EndVertical();
