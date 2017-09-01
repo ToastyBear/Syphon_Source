@@ -16,7 +16,7 @@ public class BufferDetector : MonoBehaviour {
         if (other.tag == "Enemy")
         {
             m_buffedAI.Add(other.gameObject);
-            other.GetComponent<AI>().m_damage *= transform.parent.GetComponent<AI>().m_dmgBuff * other.GetComponent<AI>().m_damage;
+            other.GetComponent<AI>().m_damage = transform.parent.GetComponent<AI>().m_dmgBuff * other.GetComponent<AI>().m_damage;
         }
 
     }

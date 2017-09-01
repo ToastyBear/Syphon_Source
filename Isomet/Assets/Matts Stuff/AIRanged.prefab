@@ -99,9 +99,12 @@ MonoBehaviour:
   m_rotationSpeed: 10
   m_health: 10
   m_damage: 10
+  m_dmgBuff: 0
   m_isRanged: 1
+  m_isBuffer: 0
   m_target: {fileID: 0}
   m_arrow: {fileID: 1813887880701156, guid: c026f769a88a89d4988fe41b240f61f5, type: 2}
+  m_spawnScript: {fileID: 0}
 --- !u!136 &136810420651198790
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -109,7 +112,7 @@ CapsuleCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1188504961261806}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 2

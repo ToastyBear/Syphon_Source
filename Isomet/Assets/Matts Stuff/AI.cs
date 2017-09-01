@@ -13,6 +13,7 @@ public class AI : MonoBehaviour {
     public float m_health;
     public float m_damage;
     public float m_dmgBuff;
+    public float m_buffRange;
     public bool m_isRanged;
     public bool m_isBuffer;
 
@@ -30,6 +31,7 @@ public class AI : MonoBehaviour {
         m_navAgent.destination = m_target.position;
         m_navAgent.stoppingDistance = m_range;
         m_navAgent.speed = m_speed;
+        if (m_isBuffer) transform.GetChild(0).GetComponent<SphereCollider>().radius = m_buffRange;
         InvokeRepeating("BehaviourController", 0.02f, 0.02f);
     }
 
@@ -82,7 +84,7 @@ public class AI : MonoBehaviour {
         Quaternion lookRotation = Quaternion.LookRotation(direction);
         transform.localRotation = Quaternion.Slerp(transform.localRotation, lookRotation, Time.deltaTime * m_rotationSpeed);
         //Check if we can attack
-        if (m_canAttack)
+        if (m_canAttack && !m_isBuffer)
         {
             //If character visible attack               ///----MAKE EFFICEITN---///
             RaycastHit hit;
@@ -116,6 +118,12 @@ public class AI : MonoBehaviour {
     void OnTriggerEnter(Collider other)
     {
         if (other.name == "Bullet(Clone)") m_health -= 5.0f;
+        if (other.name == "Buffer" && !m_isBuffer) m_damage = m_damage * other.transform.parent.GetComponent<AI>().m_dmgBuff;
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.name == "Buffer" && !m_isBuffer) m_damage = m_damage / other.transform.parent.GetComponent<AI>().m_dmgBuff; ;
     }
    
 

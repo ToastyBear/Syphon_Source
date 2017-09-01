@@ -23,6 +23,7 @@ public class AIEditor : Editor {
         myTarget.m_isRanged = EditorGUILayout.Toggle("Is Ranged? ", myTarget.m_isRanged);
         myTarget.m_isBuffer = EditorGUILayout.Toggle("Is Buffer? ", myTarget.m_isBuffer);
         if(myTarget.m_isBuffer) myTarget.m_dmgBuff = EditorGUILayout.FloatField("Damage Buff : ", myTarget.m_dmgBuff);
+        if (myTarget.m_isBuffer) myTarget.m_buffRange = EditorGUILayout.FloatField("Buff Range : ", myTarget.m_buffRange);
         viewFullInspector = EditorGUILayout.Toggle("View Inspector", viewFullInspector);
 
         GUILayout.EndVertical();
