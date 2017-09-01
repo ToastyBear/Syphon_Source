@@ -8,6 +8,9 @@ TagManager:
   - Pullable
   - Wall
   - Enemy
+  - vacuum
+  - Puddle
+  - Bullet
   layers:
   - Default
   - TransparentFX

@@ -81,18 +81,26 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\BloodTest\ClickScript.cs" />
-    <Compile Include="Assets\BloodTest\MyShaderBehavior.cs" />
-    <Compile Include="Assets\Script\BloodProjectile.cs" />
-    <Compile Include="Assets\Script\Gun.cs" />
-    <Compile Include="Assets\Script\Movement.cs" />
-    <Compile Include="Assets\Script\Shell.cs" />
-    <Compile Include="Assets\Script\Vacuum.cs" />
-    <Compile Include="Assets\Script\camera.cs" />
+    <Compile Include="Assets\Ben&apos;s Things\BloodTest\ClickScript.cs" />
+    <Compile Include="Assets\Ben&apos;s Things\BloodTest\MyShaderBehavior.cs" />
+    <Compile Include="Assets\Ben&apos;s Things\Script\BloodProjectile.cs" />
+    <Compile Include="Assets\Ben&apos;s Things\Script\Gun.cs" />
+    <Compile Include="Assets\Ben&apos;s Things\Script\Movement.cs" />
+    <Compile Include="Assets\Ben&apos;s Things\Script\Puddle.cs" />
+    <Compile Include="Assets\Ben&apos;s Things\Script\RetractableBullet.cs" />
+    <Compile Include="Assets\Ben&apos;s Things\Script\Shell.cs" />
+    <Compile Include="Assets\Ben&apos;s Things\Script\Sword.cs" />
+    <Compile Include="Assets\Ben&apos;s Things\Script\Vacuum.cs" />
+    <Compile Include="Assets\Ben&apos;s Things\Script\camera.cs" />
+    <Compile Include="Assets\Matts Stuff\AI Editor.cs" />
+    <Compile Include="Assets\Matts Stuff\AI.cs" />
+    <Compile Include="Assets\Matts Stuff\Arrow.cs" />
+    <Compile Include="Assets\Matts Stuff\CharacterMovement.cs" />
+    <Compile Include="Assets\Matts Stuff\Spawner.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Blood.shader" />
-    <None Include="Assets\BloodTest\MyShader.shader" />
+    <None Include="Assets\Ben&apos;s Things\BloodTest\Blood.shader" />
+    <None Include="Assets\Ben&apos;s Things\BloodTest\MyShader.shader" />
     <None Include="Assets\TSF\Shaders\TSF.shader" />
     <None Include="Assets\TSF\Shaders\TSFOutline.shader" />
   </ItemGroup>
