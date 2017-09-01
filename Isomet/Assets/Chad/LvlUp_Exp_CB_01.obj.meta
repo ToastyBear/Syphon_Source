@@ -1,0 +1,219 @@
+fileFormatVersion: 2
+guid: 1bfc90e21bf4a4b4ebc520c15184d9c4
+timeCreated: 1504156931
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: Book_01
+    100002: Book_Stand_01
+    100004: BrokenPillar_01
+    100006: Fence_01
+    100008: Fence_02
+    100010: Fence_03
+    100012: Fence_04
+    100014: Fence_05
+    100016: Fence_06
+    100018: Fence_07
+    100020: Fence_08
+    100022: Fence_09
+    100024: Fence_10
+    100026: Fence_11
+    100028: Floor
+    100030: L_Railing_01
+    100032: //RootNode
+    100034: Pedestal_01
+    100036: Platform_01
+    100038: R_Railing_01
+    100040: Stairs_01
+    100042: Stairs_02
+    100044: Tombstone_01
+    100046: Tombstone_02
+    100048: Tombstone_03
+    100050: Tombstone_04
+    100052: Tombstone_05
+    100054: Tombstone_06
+    400000: Book_01
+    400002: Book_Stand_01
+    400004: BrokenPillar_01
+    400006: Fence_01
+    400008: Fence_02
+    400010: Fence_03
+    400012: Fence_04
+    400014: Fence_05
+    400016: Fence_06
+    400018: Fence_07
+    400020: Fence_08
+    400022: Fence_09
+    400024: Fence_10
+    400026: Fence_11
+    400028: Floor
+    400030: L_Railing_01
+    400032: //RootNode
+    400034: Pedestal_01
+    400036: Platform_01
+    400038: R_Railing_01
+    400040: Stairs_01
+    400042: Stairs_02
+    400044: Tombstone_01
+    400046: Tombstone_02
+    400048: Tombstone_03
+    400050: Tombstone_04
+    400052: Tombstone_05
+    400054: Tombstone_06
+    2300000: Book_01
+    2300002: Book_Stand_01
+    2300004: BrokenPillar_01
+    2300006: Fence_01
+    2300008: Fence_02
+    2300010: Fence_03
+    2300012: Fence_04
+    2300014: Fence_05
+    2300016: Fence_06
+    2300018: Fence_07
+    2300020: Fence_08
+    2300022: Fence_09
+    2300024: Fence_10
+    2300026: Fence_11
+    2300028: Floor
+    2300030: L_Railing_01
+    2300032: Pedestal_01
+    2300034: Platform_01
+    2300036: R_Railing_01
+    2300038: Stairs_01
+    2300040: Stairs_02
+    2300042: Tombstone_01
+    2300044: Tombstone_02
+    2300046: Tombstone_03
+    2300048: Tombstone_04
+    2300050: Tombstone_05
+    2300052: Tombstone_06
+    3300000: Book_01
+    3300002: Book_Stand_01
+    3300004: BrokenPillar_01
+    3300006: Fence_01
+    3300008: Fence_02
+    3300010: Fence_03
+    3300012: Fence_04
+    3300014: Fence_05
+    3300016: Fence_06
+    3300018: Fence_07
+    3300020: Fence_08
+    3300022: Fence_09
+    3300024: Fence_10
+    3300026: Fence_11
+    3300028: Floor
+    3300030: L_Railing_01
+    3300032: Pedestal_01
+    3300034: Platform_01
+    3300036: R_Railing_01
+    3300038: Stairs_01
+    3300040: Stairs_02
+    3300042: Tombstone_01
+    3300044: Tombstone_02
+    3300046: Tombstone_03
+    3300048: Tombstone_04
+    3300050: Tombstone_05
+    3300052: Tombstone_06
+    4300000: Book_01
+    4300002: Book_Stand_01
+    4300004: BrokenPillar_01
+    4300006: Fence_01
+    4300008: Fence_02
+    4300010: Fence_03
+    4300012: Fence_04
+    4300014: Fence_05
+    4300016: Fence_06
+    4300018: Fence_07
+    4300020: Fence_08
+    4300022: Fence_09
+    4300024: Fence_10
+    4300026: Fence_11
+    4300028: Floor
+    4300030: L_Railing_01
+    4300032: Pedestal_01
+    4300034: Platform_01
+    4300036: R_Railing_01
+    4300038: Stairs_01
+    4300040: Stairs_02
+    4300042: Tombstone_01
+    4300044: Tombstone_02
+    4300046: Tombstone_03
+    4300048: Tombstone_04
+    4300050: Tombstone_05
+    4300052: Tombstone_06
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
