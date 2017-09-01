@@ -86,6 +86,7 @@
     <Compile Include="Assets\Matts Stuff\AI Editor.cs" />
     <Compile Include="Assets\Matts Stuff\AI.cs" />
     <Compile Include="Assets\Matts Stuff\Arrow.cs" />
+    <Compile Include="Assets\Matts Stuff\BufferDetector.cs" />
     <Compile Include="Assets\Matts Stuff\CharacterMovement.cs" />
     <Compile Include="Assets\Matts Stuff\Spawner.cs" />
     <Compile Include="Assets\Script\BloodProjectile.cs" />

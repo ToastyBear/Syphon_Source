@@ -21,7 +21,10 @@ public class AIEditor : Editor {
         myTarget.m_damage = EditorGUILayout.FloatField("Damage : ", myTarget.m_damage);
         myTarget.m_health = EditorGUILayout.FloatField("Health : ", myTarget.m_health);
         myTarget.m_isRanged = EditorGUILayout.Toggle("Is Ranged? ", myTarget.m_isRanged);
+        myTarget.m_isBuffer = EditorGUILayout.Toggle("Is Buffer? ", myTarget.m_isBuffer);
+        if(myTarget.m_isBuffer) myTarget.m_dmgBuff = EditorGUILayout.FloatField("Damage Buff : ", myTarget.m_dmgBuff);
         viewFullInspector = EditorGUILayout.Toggle("View Inspector", viewFullInspector);
+
         GUILayout.EndVertical();
 
         if (viewFullInspector) base.DrawDefaultInspector();

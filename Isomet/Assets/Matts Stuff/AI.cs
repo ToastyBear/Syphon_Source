@@ -12,7 +12,9 @@ public class AI : MonoBehaviour {
     public float m_rotationSpeed;
     public float m_health;
     public float m_damage;
+    public float m_dmgBuff;
     public bool m_isRanged;
+    public bool m_isBuffer;
 
     //Object Variables
     public Transform m_target;
@@ -66,7 +68,8 @@ public class AI : MonoBehaviour {
             else if ((m_target.position - transform.localPosition).normalized.z == 0) transform.Translate(0, 0, 0);
             LookAtPlayer();
         }
-        if(m_health < 0)
+        //Death
+        if(m_health <= 0)
         {
             Die();
         }
@@ -116,83 +119,5 @@ public class AI : MonoBehaviour {
     }
    
 
-    //void old()
-    //{
-    //    ////Kiting
-    //    //else if(m_navAgent.remainingDistance < 1.7f && !m_isKiting && m_isRanged && m_navAgent.remainingDistance != 0)
-    //    //{
-    //    //    m_navAgent.updateRotation = false;
-    //    //    float playerNodeDist = 0;
-    //    //    Vector3 kitePos = Vector3.zero;
-    //    //    Vector3 tempPos;
-    //    //    for(int x = 0; x < 4; x++)
-    //    //    {
-    //    //        //Set Node Position
-    //    //        if(x == 0)  tempPos = new Vector3(transform.position.x + m_kiteDist, transform.position.y, transform.localPosition.z);
-    //    //        else if(x == 1) tempPos = new Vector3(transform.position.x - m_kiteDist, transform.position.y, transform.localPosition.z);
-    //    //        else if (x == 2) tempPos = new Vector3(transform.position.x, transform.position.y, transform.localPosition.z + m_kiteDist);
-    //    //        else tempPos = new Vector3(transform.position.x, transform.position.y, transform.localPosition.z - m_kiteDist);
-    //    //        //Get the node furthest from player
-    //    //        if(playerNodeDist < Vector3.Distance(tempPos, m_target.position))
-    //    //        {
-    //    //            playerNodeDist = Vector3.Distance(tempPos, m_target.position);
-    //    //            kitePos = tempPos;
-    //    //        }
-    //    //    }
-    //    //    m_navAgent.stoppingDistance = 0;            
-    //    //    m_destination = kitePos;
-    //    //    m_isKiting = true;
-    //    //    print("Kiting");
-    //    //}
-    //    ////Chasing
-    //    //else if(m_navAgent.remainingDistance >= 2 || m_navAgent.remainingDistance < 0.15f)
-    //    //{
-    //    //    print("Chasing");
-    //    //    if(m_navAgent.remainingDistance == 0)
-    //    //    {
-    //    //        AttackBehaviour();
-    //    //        return;
-    //    //    }
-    //    //    m_destination = m_target.position;
-    //    //    m_navAgent.stoppingDistance = m_range;
-    //    //    m_navAgent.updateRotation = true;
-    //    //    m_isKiting = false;
-    //    //}
-
-    //. if(m_isKiting) transform.Translate(-transform.forward * 0.03f);
-    //else if(m_navAgent.remainingDistance < m_range - 0.6f && m_navAgent.remainingDistance != 0 && !m_isKiting)
-    //{
-    //    m_isKiting = true;
-    //    float playerNodeDist = 0;
-    //    Vector3 kitePos = Vector3.zero;
-    //    Vector3 tempPos;
-    //    for (int x = 0; x < 4; x++)
-    //    {
-    //        //Set Node Position
-    //        if (x == 0) tempPos = new Vector3(transform.position.x + m_kiteDist, transform.position.y, transform.localPosition.z);
-    //        else if (x == 1) tempPos = new Vector3(transform.position.x - m_kiteDist, transform.position.y, transform.localPosition.z);
-    //        else if (x == 2) tempPos = new Vector3(transform.position.x, transform.position.y, transform.localPosition.z + m_kiteDist);
-    //        else tempPos = new Vector3(transform.position.x, transform.position.y, transform.localPosition.z - m_kiteDist);
-    //        //Get the node furthest from player
-    //        if (playerNodeDist < Vector3.Distance(tempPos, m_target.position))
-    //        {
-    //            playerNodeDist = Vector3.Distance(tempPos, m_target.position);
-    //            kitePos = tempPos;
-    //        }
-    //    }
-    //    m_navAgent.stoppingDistance = 0;
-    //    m_destination = kitePos;
-    //    print("Kiting");
-    //}
-    //else if (m_navAgent.remainingDistance < 0.1f && m_isKiting)
-    //{
-    //    m_isKiting = false;
-    //    m_navAgent.stoppingDistance = m_range;
-    //    m_destination = m_target.position;
-    //}
-    //else if(m_navAgent.remainingDistance < 0.5f && m_isRanged)
-    //{
-    //    print("Hi");
-    //}
-    //}
+    
 }
